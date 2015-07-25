@@ -1,6 +1,6 @@
 # Site settings
-title: Shrewsbury Dribblers – 
-email: your-email@domain.com
+title: Shrewsbury Dribblers
+email: shrewsburydribblers@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Friendly, fun adults basketball for all abilities 
 baseurl: "" # the subpath of your site, e.g. /blog/
