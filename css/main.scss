@@ -321,6 +321,9 @@ tfoot {
 
 .minititle {
   font-size: 1.25em;
+  @media (min-width: $medium_screen) {
+    font-size: 1.75em;
+  }
   text-transform: uppercase;
   font-weight: 700; 
 }
