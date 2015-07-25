@@ -1,0 +1,46 @@
+$helv: "proxima-nova", Arial, Helvetica, serif;
+$brandon: 'brandon-grotesque', Arial, Helvetica, serif;
+
+$body_typeface: $brandon;
+$body_typeface_semibold: 600;
+$body_typeface_bold: 700;
+$heading_typeface: $brandon;
+$heading_typeface_bold: 700;
+$heading_typeface_extrabold: 900;
+
+
+$colour_blue: #0a53a3;
+$colour_red: #cc2a31;
+$colour_yellow: #ffcf01;
+$colour_light_blue: #AAF8F7;
+$colour_light_yellow: #EEF8D0;
+$colour_white: #FFFFFF;
+
+$colour_grey: #ccc;
+$colour_light_grey: lighten($colour_grey, 10%);
+$colour_lighter_grey: lighten($colour_grey, 20%);
+$colour_off_white: lighten($colour_grey, 30%);
+
+$colour_mid_grey: darken($colour_grey, 20%);
+$colour_dark_grey: darken($colour_grey, 35%);
+$colour_black: #333;
+
+$colour_primary: $colour_blue;
+$colour_secondary: $colour_red;
+
+$colour_background: $colour_white;
+$colour_links: $colour_blue;
+$colour_borders: $colour_lighter_grey;
+
+$border_radius: 5px;
+
+$size_font-base: 18px;
+
+$giant_screen: 67.5em;
+$large_screen: 56em;
+$medium_screen: 44em;
+$high_dpi_screen: '-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi';
+
+$animation-short: 0.2s ease-out;
+
+

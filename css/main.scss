@@ -1,0 +1,534 @@
+---
+---
+@charset 'utf8';
+@import 'normalize';
+@import 'mixins';
+@import 'variables';
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+html {
+
+}
+
+
+body {
+    min-height: 100%;
+    height: 100%;
+    color: $colour_white;
+    font-family: $body_typeface;
+    font-size: 1.125em; //18px
+    height: 100%;
+    line-height: 1.388888889em; //25px
+    min-height: 100%;
+    background-color: $colour_off_white;
+    @media (min-width:$medium_screen) {
+        line-height: 1.5em; //27px
+    }
+}
+
+a {
+    color: $colour_links;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color:darken($colour_links, 15%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading_typeface;
+    line-height: 1.3em;
+    margin-bottom: 0.33em;
+    margin-top: 0;
+    font-weight: $heading_typeface_bold;
+    text-transform: uppercase;
+}
+
+h1,
+.primary-heading {
+    font-size: 2.666666667em; //48px
+    @media (min-width:$medium_screen) {
+        font-size: 4em; //72px
+    }
+}
+
+h2,
+.secondary-heading {
+    font-size: 2em; //36px
+    @media (min-width:$medium_screen) {
+        font-size: 2.444444444em; //44px
+    }
+}
+
+h3,
+.tertiary-heading {
+    font-size: 1.166666667em; //21px
+    line-height: 1.5em;
+    @media (min-width:$medium_screen) {
+        font-size: 1.277777778em; //23px
+    }
+}
+
+h4,
+.quarternary-heading {
+    font-size: 1.055555556em; //19px
+    @media (min-width:$medium_screen) {
+        font-size: 1.166666667em; //21px
+    }
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+pre, code, kbd, samp {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+code {
+    @include vendor-prefix(border-radius, $border_radius);
+    border: 1px solid $colour_borders;
+    padding: 0 0.2em;
+}
+
+pre {
+    background-color: $colour_background;
+    @include vendor-prefix(border-radius, $border_radius);
+    border: 1px solid $colour_borders;
+    display: block;
+    font-size: .9375em;
+    line-height: 1.4375em;
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: 1em;
+    white-space: pre-wrap;
+    code {
+        border: none;
+        padding: 0;
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $colour_borders;
+    margin: 0;
+}
+
+audio,
+video,
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+ol,
+ul {
+    padding-left: 1.8em;
+}
+
+th {
+    text-align: left;
+}
+
+strong, b {
+    font-weight: $body_typeface_bold;
+}
+
+mark {
+    background-color: lighten($colour_red, 20%);
+}
+
+blockquote {
+    @include vendor-prefix(border-radius, $border_radius);
+    clear: both;
+    color: $colour_dark_grey;
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 1.5em;
+    margin: 1em 0;
+    padding: 1em 1em 1em 1.5em;
+}
+
+input[type=file] {
+    max-width: 100%;
+    width: 100%;
+}
+
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=search],
+input[type=time],
+input[type=datalist],
+input[type=date],
+textarea,
+.standard-input {
+    @include vendor-prefix(border-radius, $border_radius);
+    border: 1px solid $colour_borders;
+    max-width: 100%;
+    padding: 0.66em;
+}
+
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=search],
+textarea {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+legend {
+    font-family: $heading_typeface;
+    font-size: 1.764705882em;
+    font-weight: $heading_typeface_bold;
+    line-height: 1.1em;
+    margin-bottom: 0.33em;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 0.875em;
+    margin: 1em 0;
+    max-width: 100%;
+    width: 100%;
+    p {
+        margin: 0;
+    }
+}
+
+td, th {
+    border-bottom: 1px solid $colour_borders;
+    padding: 0.75em 0.6em;
+    text-align: left;
+}
+
+th {
+    background: inherit;
+}
+
+th[scope="row"] {
+    color: $colour_dark_grey;
+}
+
+tbody {
+    tr:hover {
+        background-color: $colour_background;
+        th[scope="row"] {
+            color: $colour_black;
+        }
+
+    }
+}
+
+caption {
+    color: $colour_dark_grey;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: left;
+}
+
+tfoot {
+    font-size: 0.875em;
+    font-weight: normal;
+    td {
+        text-align: right;
+        border: none;
+    }
+}
+
+@import 'components';
+@import 'site-header';
+@import 'site-footer';
+
+.background {
+  background-image: url(../assets/img/bg.jpg);
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  &:before {
+    content: "";
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+.site-heading-title {
+  padding: 4em 0;
+  @media (min-width: $medium_screen) {
+    padding: 9em 0;
+  }
+  text-align: center;
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+    @media (min-width: $medium_screen) {
+      font-size: 4.5em;
+    }
+  }
+  h2 {
+    text-transform: none;
+    font-size: 1.5em;
+    @media (min-width: $medium_screen) {
+      font-size: 2.4em;
+    }
+  }
+  p {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.3em;
+  }
+}
+
+.site-info {
+  width: 100%;
+  @include clearfix;
+}
+
+.minititle {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: 700; 
+}
+
+.decorative-date {
+  .date,
+  .month {
+    display: inline;
+  }
+  @media (min-width: $medium_screen) {
+    width: 100%;
+    max-width: 120px;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 0.33em;
+    border-radius: 5px;
+    float: left;
+    .month {
+      width: 100%;
+      padding: 0.5em 0;
+      color: #fff;
+      background-color: darken($colour_red, 8%);
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 5px 5px 0 0;
+      display: block;
+    }
+    .date {
+      font-weight: 900;
+      font-size: 4.5em;
+      line-height: 1em;
+      color: darken($colour_red, 8%);
+      display: block;
+    }
+  }
+  
+}
+
+.reversed-section {
+  a {
+    color: #fff;
+    border-bottom: 2px dotted rgba(255,255,255,0.3);
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom-color: #fff;
+    }
+  }
+  .button {
+    border-bottom: 0 !important;
+  }
+}
+
+.next-event {
+  clear: both;
+  .button {
+    display: inline-block;
+  }
+}
+
+.next-event__details {
+  @media (min-width: $medium_screen) {
+    margin-left: 150px;  
+  }
+}
+
+.half-one {
+  float: left;
+  background-color: $colour_blue;
+  @include clearfix;
+  width: 100%;
+  @media (min-width: $large_screen) {
+    width: 50%;
+    min-height: 204px;
+  }
+}
+
+.half-one--container {
+    float: right;
+    padding: 2em;
+    width: 100%;
+    @extend .reversed-section;
+    @media (min-width: $large_screen) {
+      max-width: 632.5px;
+    }
+}
+
+.half-two {
+  float: left;
+  background-color: $colour_red;
+  width: 100%;
+  @include clearfix;
+  @media (min-width: $large_screen) {
+    width: 50%;
+    float: right;
+    min-height: 204px;
+  }
+}
+
+
+.half-two--container {
+    float: left;
+    padding: 2em;
+    width: 100%;
+    @extend .reversed-section;
+    @media (min-width: $large_screen) {
+      max-width: 632.5px;
+    }
+}
+
+.tournies,
+.team {
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-right: 3em;
+  @media (min-width: $large_screen) {
+    padding-left: 1.5em;
+  }
+}
+
+.tournies {
+  background-image: url(../assets/img/bw-tournies.jpg);
+  position: relative;
+  @media (min-width: $large_screen) {
+    padding-left: 1.5em;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 205px;
+    width: 91px;
+    background-size: cover;
+    top: -90px;
+    right: 10px;
+    background-image: url(../assets/img/dribblers-reversed.png);
+    @media (min-width: $large_screen) {
+      left: -45px;
+      top: -2px;
+    }
+  }
+}
+
+.team {
+  background-image: url(../assets/img/bw-team.jpg);
+  background-position: 50% 30%;
+}
+
+.contact-information {
+  @extend .reversed-section;
+  background-color: #222;
+  padding: 4em 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 1em; 
+  }
+  .button {
+    margin: 0 0 1em;
+    width: 100%;
+    text-align: left;
+    @media (min-width: $medium_screen) {
+      width: auto;
+      text-align: center;
+       margin: 0 0.5em 0;
+    }
+  }
+}
+
+%button-with-icon {
+  background-position: 1em center;
+  background-size: 2em;
+  background-repeat: no-repeat;
+  padding-left: 3.5em;
+}
+
+.facebook {
+  background-color: #3B5998;
+  background-image: url('../assets/img/facebook.svg');
+  background-size: 12px;
+  padding-left: 2.5em;
+  @extend %button-with-icon;
+  &:hover,
+  &:active,
+  &:focus {
+      background-color: darken(#3B5998, 5%);
+  }
+}
+
+.twitter {
+  background-color: #4099ff;
+  background-image: url('../assets/img/twitter.svg');
+  background-size: 27px;
+  @extend %button-with-icon;
+  &:hover,
+  &:active,
+  &:focus {
+      background-color: darken(#4099ff, 10%);
+    }
+}
+
+.contact {
+  background-color: $colour_red;
+  &:hover,
+  &:active,
+  &:focus {
+      background-color: darken($colour_red, 10%);
+  }
+}
+
+

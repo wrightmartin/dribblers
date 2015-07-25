@@ -1,0 +1,12 @@
+# Site settings
+title: Shrewsbury Dribblers – 
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Friendly, fun adults basketball for all abilities 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://dribblers.org" # the base hostname & protocol for your site
+twitter_username: shrewsdribblers
+github_username:  wrightmartin
+
+# Build settings
+markdown: kramdown
