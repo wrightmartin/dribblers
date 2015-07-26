@@ -317,6 +317,7 @@ tfoot {
 .site-info {
   width: 100%;
   @include clearfix;
+  display: table;
 }
 
 .minititle {
@@ -391,18 +392,18 @@ tfoot {
 }
 
 .half-one {
-  float: left;
   background-color: $colour_blue;
   @include clearfix;
   width: 100%;
+  float: left;
   @media (min-width: $large_screen) {
+    float: none;
+    display: table-cell;
     width: 50%;
-    min-height: 204px;
   }
 }
 
 .half-one--container {
-    float: right;
     padding: 2em;
     width: 100%;
     @extend .reversed-section;
@@ -411,21 +412,24 @@ tfoot {
     }
 }
 
+.table-row {
+  display: table-row;
+}
+
 .half-two {
-  float: left;
   background-color: $colour_red;
   width: 100%;
+  float: left;
   @include clearfix;
   @media (min-width: $large_screen) {
+    float: none;
+    display: table-cell;
     width: 50%;
-    float: right;
-    min-height: 204px;
   }
 }
 
 
 .half-two--container {
-    float: left;
     padding: 2em;
     width: 100%;
     @extend .reversed-section;
