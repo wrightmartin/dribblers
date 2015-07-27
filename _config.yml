@@ -1,8 +1,8 @@
 # Site settings
-title: Shrewsbury Dribblers
+title: Shrewsbury Dribblers – Friendly, fun adults basketball for all abilities 
 email: shrewsburydribblers@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Friendly, fun adults basketball for all abilities 
+  Shrewsbury Dribblers are an adult basketball team in Shrewsbury. We offer friendly, fun adults basketball for all abilities. We play most Mondays at 8pm, at the Grange School
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://dribblers.org" # the base hostname & protocol for your site
 twitter_username: shrewsdribblers
