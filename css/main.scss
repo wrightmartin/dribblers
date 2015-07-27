@@ -331,12 +331,14 @@ tfoot {
 }
 
 .decorative-date {
+
   .date,
   .month {
     display: inline;
   }
   @media (min-width: $medium_screen) {
     width: 100%;
+    margin-bottom: 2em;
     max-width: 120px;
     text-align: center;
     background-color: #fff;
@@ -434,9 +436,21 @@ tfoot {
     padding: 2em;
     width: 100%;
     @extend .reversed-section;
-    @media (min-width: $large_screen) {
-      max-width: 632.5px;
-    }
+}
+
+
+.team {
+  position: relative;
+}
+
+
+.mondays {
+  @media (min-width: $large_screen) {
+    position: absolute;
+    right: 4em;
+    top: 2.25em;
+    padding-left: 2em;
+  }
 }
 
 .tournies,
