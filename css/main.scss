@@ -285,19 +285,38 @@ tfoot {
     bottom: 0;
     background-color: rgba(0,0,0,0.3);
   }
+  @media (min-width: $giant_screen) {
+      width: 66%;
+      min-width: 66%;
+      right: auto;
+      
+  }
+}
+
+.hero {
+    @media (min-width: $giant_screen) {
+      text-align: left;
+      width: 66%;
+      float: left;
+  }
 }
 
 .site-heading-title {
   padding: 4em 0;
+  text-align: center;
   @media (min-width: $medium_screen) {
     padding: 9em 0;
   }
-  text-align: center;
+  @media (min-width: $giant_screen) {
+    text-align: left;
+    padding: 8em 12em 8em 8em;
+  }
   h1 {
     font-size: 2.2em;
     margin-bottom: 0;
     @media (min-width: $medium_screen) {
       font-size: 4.5em;
+      line-height: 1.1em;
     }
   }
   h2 {
@@ -319,6 +338,17 @@ tfoot {
   @include clearfix;
   display: table;
   min-height: 204px;
+  @media (min-width: $giant_screen) {
+    min-height: 0;
+    width: 34%;
+    float: right;
+    display: block;
+    background-image: url(../assets/img/bw-tournies.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 805px;
+  }
 }
 
 .minititle {
@@ -331,7 +361,6 @@ tfoot {
 }
 
 .decorative-date {
-
   .date,
   .month {
     display: inline;
@@ -399,10 +428,10 @@ tfoot {
   @include clearfix;
   width: 100%;
   float: left;
-  @media (min-width: $large_screen) {
+  @media (min-width: $large_screen) and (max-width: $giant_screen) {
     float: none;
     display: table-cell;
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -410,13 +439,16 @@ tfoot {
     padding: 2em;
     width: 100%;
     @extend .reversed-section;
-    @media (min-width: $large_screen) {
+    @media (min-width: $large_screen) and (max-width: $giant_screen) {
       max-width: 632.5px;
     }
 }
 
 .table-row {
   display: table-row;
+  @media (min-width: $giant_screen) {
+    display: block;
+  }
 }
 
 .half-two {
@@ -424,10 +456,10 @@ tfoot {
   width: 100%;
   float: left;
   @include clearfix;
-  @media (min-width: $large_screen) {
+    @media (min-width: $large_screen) and (max-width: $giant_screen) {
     float: none;
     display: table-cell;
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -445,7 +477,7 @@ tfoot {
 
 
 .mondays {
-  @media (min-width: $large_screen) {
+  @media (min-width: $large_screen) and (max-width: $large_screen) {
     position: absolute;
     right: 4em;
     top: 2.25em;
@@ -463,6 +495,10 @@ tfoot {
   @media (min-width: $large_screen) {
     padding-left: 1.5em;
   }
+  @media (min-width: $giant_screen) {
+    padding-top: 3em;
+    padding-bottom: 5em;
+  }
 }
 
 .tournies {
@@ -470,6 +506,9 @@ tfoot {
   position: relative;
   @media (min-width: $large_screen) {
     padding-left: 1.5em;
+  }
+  @media (min-width: $giant_screen) {
+    background: transparent;
   }
   &:after {
     content: "";
@@ -485,6 +524,9 @@ tfoot {
       left: -45px;
       top: -2px;
     }
+    @media (min-width: $giant_screen) {
+      top: -100px;
+    }
   }
 }
 
@@ -498,6 +540,8 @@ tfoot {
   background-color: #222;
   padding: 4em 0;
   text-align: center;
+  width: 100%;
+  clear: both;
   h2 {
     margin-bottom: 1em; 
   }

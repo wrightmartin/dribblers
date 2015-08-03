@@ -8,6 +8,10 @@
     @media (min-width: $medium-screen) {
         padding: 0 2em;
     }
+    @media (min-width: $giant_screen) {
+        max-width: none;
+        margin: 0;
+    }
 }
 
 
