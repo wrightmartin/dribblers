@@ -289,7 +289,7 @@ tfoot {
       width: 66%;
       min-width: 66%;
       right: auto;
-      
+
   }
 }
 
@@ -357,7 +357,7 @@ tfoot {
     font-size: 1.75em;
   }
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 .decorative-date {
@@ -392,7 +392,7 @@ tfoot {
       display: block;
     }
   }
-  
+
 }
 
 .reversed-section {
@@ -419,7 +419,7 @@ tfoot {
 
 .next-event__details {
   @media (min-width: $medium_screen) {
-    margin-left: 150px;  
+    margin-left: 150px;
   }
 }
 
@@ -431,7 +431,7 @@ tfoot {
   @media (min-width: $large_screen) and (max-width: $giant_screen) {
     float: none;
     display: table-cell;
-    width: 70%;
+    width: 50%;
   }
 }
 
@@ -459,7 +459,7 @@ tfoot {
     @media (min-width: $large_screen) and (max-width: $giant_screen) {
     float: none;
     display: table-cell;
-    width: 30%;
+    width: 50%;
   }
 }
 
@@ -543,7 +543,7 @@ tfoot {
   width: 100%;
   clear: both;
   h2 {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
   }
   .button {
     margin: 0 0 1em;
