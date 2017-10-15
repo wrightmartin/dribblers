@@ -259,7 +259,7 @@ tfoot {
 
 .background {
   background-image: url(../assets/img/bg.jpg);
-  background-position: right center;
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   height: 900px;
@@ -352,9 +352,9 @@ tfoot {
 }
 
 .minititle {
-  font-size: 1.25em;
+  font-size: 1em;
   @media (min-width: $medium_screen) {
-    font-size: 1.75em;
+    font-size: 1.25em;
   }
   text-transform: uppercase;
   font-weight: 700;
@@ -597,5 +597,3 @@ tfoot {
       background-color: darken($colour_red, 10%);
   }
 }
-
-

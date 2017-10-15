@@ -59,7 +59,7 @@
     @include vendor-prefix(transition, background-color $animation-short);
     font-weight: $heading_typeface_extrabold;
     text-transform: uppercase;
-    font-size: 0.888888889em;
+    font-size: 0.75em;
     &:hover,
     &:active,
     &:focus {
